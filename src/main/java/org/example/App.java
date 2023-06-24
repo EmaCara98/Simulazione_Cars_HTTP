@@ -8,6 +8,7 @@ import java.net.InetSocketAddress;
 // POST:
 // Aprire: Windows Powershell
     // Digitare il comando: curl -X POST "http://127.0.0.1:8000" -d "all"
+    // Se il comando precedente vi ha dato errore, digitate il comando: Remove-item alias:curl e poi riprovare
     // Ripetere il comando cambiando "all" con "all_sorted"
     // Ripetere il comando cambiando "all" con "more_expensive"
     // Ripetere il comando cambiando "all" con lettere a caso, deve mostrare il messaggio di errore
