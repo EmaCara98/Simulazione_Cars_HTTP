@@ -1,4 +1,4 @@
-package org.example;    //il package è la cartella nella quale si trovano i file .java
+package org.example;
 
 import com.sun.net.httpserver.HttpServer;
 import java.io.IOException;
@@ -26,15 +26,15 @@ import java.net.InetSocketAddress;
 public class App
 {
     public static void main( String[] args ) {
-        HttpServer server = null;                                                   // Creiamo un HttpServer
-        try {                                                                       // il try/catch setta la porta 8000
-            server = HttpServer.create(new InetSocketAddress(8000), 0); // e gestisce eventuali errori
+        HttpServer server = null;
+        try {
+            server = HttpServer.create(new InetSocketAddress(8000), 0);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        server.createContext("/", new MyHandler());    // Sul server creiamo un Handler che servirà a leggere
-        server.setExecutor(null);                           // il comando dei client che si connettono
-        server.start();                                     // Dopo aver settato tutto avviamolo con il metodo start()
+        server.createContext("/", new MyHandler());
+        server.setExecutor(null);
+        server.start();
     }
 }
